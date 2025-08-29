@@ -6,9 +6,9 @@ import UseCaseCard from '../../components/UseCaseCard';
 // Helper component for list items in the main content
 const ListItem = ({ children }) => (
     <li className="flex items-start">
-        <span className="text-blue-600 mr-3 mt-1 flex-shrink-0">&#8226;</span>
-        <span className="text-sm sm:text-base">{children}</span>
-    </li>
+        <span aria-hidden="true" className="w-1 h-1 bg-gray-600 mr-3 mt-[16px] flex-shrink-0"></span>
+        <span className="text-sm sm:text-base mt-1">{children}</span>
+    </li>    
 );
 
 // Main App Component
@@ -265,7 +265,7 @@ export default function UseCaseDetail() {
                                         <li 
                                             key={section.id} 
                                             className={`flex-shrink-0 lg:flex-shrink transition-all duration-500 ease-out ${
-                                                useCaseData ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                                                useCaseData ? 'opacity-100 translate-y-0' : 'opacity-0 translat  e-y-4'
                                             }`}
                                             style={{ transitionDelay: `${index * 100}ms` }}
                                         >
@@ -294,7 +294,7 @@ export default function UseCaseDetail() {
                                     ? 'opacity-100 translate-y-0' 
                                     : 'opacity-0 translate-y-8'
                             }`}>
-                                <p className="text-xs sm:text-sm font-semibold px-3 sm:px-4 text-gray-600 uppercase tracking-wider mb-2 sm:mb-3 bg-green-200 rounded-full py-1 w-fit">
+                                <p className="text-xs sm:text-sm font-semibold px-3 sm:px-4 text-black tracking-wider mb-2 sm:mb-3 bg-[#C5EDE0] rounded-full py-1 w-fit font-family-Sora">
                                     {useCaseData.category} Use Case
                                 </p>
                                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 leading-tight">
