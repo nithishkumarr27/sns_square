@@ -1,0 +1,126 @@
+{
+  "supply-chain": {
+    "id": "supply-chain",
+    "title": "Supply Chain & Logistics",
+    "category": "Supply Chain",
+    "summary": "Intelligent inventory control using Agentic AI for modern supply chain resilience",
+    "heroTitle": "The Future of Intelligent Inventory Control using Agentic AI",
+    "description": "Traditional inventory practices can't keep pace with today's dynamic supply chains. Intelligent agents, automation, and AI-powered inventory control provide a groundbreaking solution.",
+    "image": "/images/img_security_concep.png",
+    "sections": [
+      {
+        "id": "smart-inventory",
+        "title": "Smart Inventory",
+        "content": "Traditional inventory practices can't keep pace with today's dynamic supply chains. Intelligent agents, automation, and AI-powered inventory control provide a groundbreaking solution. The backbone of efficient supply chains, yet manual processes, static tools, and lagging insights often hinder businesses. By applying AI-driven automation and agentic intelligence, organizations can achieve smarter, more resilient inventory management and meet customer expectations."
+      },
+      {
+        "id": "stock-struggles",
+        "title": "Stock Struggles",
+        "content": "Managing inventory across multiple warehouses is complex, error-prone, and often reactive. Even with sensors, RFID, and tracking systems, organizations struggle to turn raw data into meaningful, actionable insights.",
+        "challenges": [
+          "Disparate systems: Frequent delays in customer demand response and reporting inaccuracies.",
+          "Visibility gaps: Real-time stock monitoring across locations remains limited.",
+          "Data overload: Sensors and tracking solutions collect information, but lack intelligence to convert it into decisions.",
+          "Manual handling errors: Reliance on people for updates and monitoring often results in mistakes, delays, and inefficiencies."
+        ]
+      },
+      {
+        "id": "from-chaos",
+        "title": "From Chaos to Control",
+        "content": "Agentic AI-powered solutions go beyond visibility—they deliver real-time automation, agentic orchestration, and intelligent decision-making.",
+        "features": [
+          "Stock analysis & timely monitoring: Ensures the right products are available at the right time.",
+          "Orchestration of agents and human-in-the-loop for managing and executing replenishment workflows.",
+          "Data-driven insights: Converts raw inputs from sensors and RFID into actionable strategies.",
+          "Real-time visibility: A unified view of inventory levels, order statuses, and demand signals across networks."
+        ],
+        "additionalContent": "With autonomous agents monitoring and adjusting stock levels continuously, businesses can maintain balance, improve efficiency, and respond instantly to demand shifts."
+      },
+      {
+        "id": "intelligent-advantage",
+        "title": "Intelligent Inventory Advantage",
+        "content": "AI-powered inventory management delivers more than efficiency—it creates a competitive edge. By reducing errors through automation, predicting demand with greater precision, and turning data into actionable intelligence, our solution enhances collaboration. It provides proactive decision-making, enabling businesses to anticipate challenges. This empowers the system to adapt seamlessly to fluctuating demand. The result is inventory that is smarter, leaner, and built for modern supply chain resilience."
+      }
+    ],
+    "relatedUseCases": ["retail-ecommerce", "it-development"]
+  },
+  "retail-ecommerce": {
+    "id": "retail-ecommerce",
+    "title": "Retail & E-commerce",
+    "category": "Retail",
+    "summary": "Increased conversion by 32% with adaptive shopping agents",
+    "heroTitle": "Transforming Retail with Intelligent Shopping Agents",
+    "description": "Revolutionize customer experience and boost conversions through AI-powered personalization and adaptive shopping assistance.",
+    "image": "/images/img_image_11.png",
+    "sections": [
+      {
+        "id": "personalized-shopping",
+        "title": "Personalized Shopping Experience",
+        "content": "AI agents analyze customer behavior in real-time to provide personalized product recommendations, creating unique shopping journeys for each customer."
+      },
+      {
+        "id": "conversion-optimization",
+        "title": "Conversion Optimization",
+        "content": "Smart algorithms identify conversion bottlenecks and automatically adjust the shopping experience to maximize sales potential.",
+        "features": [
+          "Real-time price optimization based on demand and inventory",
+          "Personalized discount strategies",
+          "Dynamic product placement and recommendations",
+          "Abandoned cart recovery automation"
+        ]
+      },
+      {
+        "id": "customer-insights",
+        "title": "Customer Intelligence",
+        "content": "Advanced analytics provide deep insights into customer preferences, enabling businesses to anticipate needs and trends.",
+        "benefits": [
+          "32% increase in conversion rates",
+          "Reduced customer acquisition costs",
+          "Improved customer lifetime value",
+          "Enhanced customer satisfaction scores"
+        ]
+      }
+    ],
+    "relatedUseCases": ["supply-chain", "it-development"]
+  },
+  "it-development": {
+    "id": "it-development",
+    "title": "IT & Software Development",
+    "category": "Technology",
+    "summary": "Accelerate development cycles with AI-powered automation and testing",
+    "heroTitle": "Next-Generation Software Development with Agentic AI",
+    "description": "Transform how businesses build and scale software by separating business logic from code, enabling rapid development and deployment.",
+    "image": "/images/img_image_12.png",
+    "sections": [
+      {
+        "id": "agile-development",
+        "title": "Agile Development Platform",
+        "content": "LCNC + Agentic AI development engine enables rapid creation, migration, and scaling. Builds products around business rules instead of hard-coding."
+      },
+      {
+        "id": "automated-testing",
+        "title": "Automated Testing & Quality Assurance",
+        "content": "AI-powered testing automation that self-heals broken tests and converts plain English into comprehensive test cases.",
+        "features": [
+          "Auto-heals broken tests automatically",
+          "Converts plain English into test cases",
+          "Predicts critical testing scenarios",
+          "Smart reporting and CI/CD integration",
+          "Self-healing tests reduce maintenance overhead"
+        ]
+      },
+      {
+        "id": "deployment-automation",
+        "title": "Autonomous Deployment",
+        "content": "Zero-touch deployments with intelligent orchestration, autonomous rollbacks, and real-time anomaly detection.",
+        "benefits": [
+          "Apps shipped up to 5x faster",
+          "Development costs reduced by 40%",
+          "Migration effort cut by over 70%",
+          "Zero-touch deployments with 99.9% reliability"
+        ]
+      }
+    ],
+    "relatedUseCases": ["supply-chain", "retail-ecommerce"]
+  }
+}
