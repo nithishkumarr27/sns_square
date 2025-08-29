@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Briefcase, BarChart2, Zap, BrainCircuit, ArrowLeft } from 'lucide-react';
+import UseCaseCard from '../../components/UseCaseCard';
 
 // Helper component for list items in the main content
 const ListItem = ({ children }) => (
@@ -19,6 +20,9 @@ export default function UseCaseDetail() {
     const [activeSection, setActiveSection] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [visibleElements, setVisibleElements] = useState(new Set());
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageLoading, setImageLoading] = useState(true);
 
     useEffect(() => {
         const fetchUseCaseData = async () => {
@@ -45,6 +49,9 @@ export default function UseCaseDetail() {
                 const related = currentUseCase.relatedUseCases?.map(relatedId => data[relatedId]).filter(Boolean) || [];
                 setRelatedUseCases(related);
 
+                // Scroll to top when new page loads
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
             } catch (err) {
                 setError(err.message);
             } finally {
@@ -53,6 +60,16 @@ export default function UseCaseDetail() {
         };
 
         if (id) {
+            // Reset states when navigating to a new use case
+            setUseCaseData(null);
+            setRelatedUseCases([]);
+            setActiveSection('');
+            setVisibleElements(new Set());
+            setImageLoaded(false);
+            setImageLoading(true);
+            setLoading(true);
+            setError(null);
+            
             fetchUseCaseData();
         }
     }, [id]);
@@ -94,12 +111,96 @@ export default function UseCaseDetail() {
         };
     }, [useCaseData]);
 
+    // Scroll animation observer
+    useEffect(() => {
+        const animationObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setVisibleElements(prev => new Set([...prev, entry.target.id]));
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            }
+        );
+
+        // Observe all animatable elements
+        const elementsToAnimate = document.querySelectorAll('.fade-in-element');
+        elementsToAnimate.forEach(el => {
+            if (el.id) {
+                animationObserver.observe(el);
+            }
+        });
+
+        return () => {
+            elementsToAnimate.forEach(el => {
+                if (el.id) {
+                    animationObserver.unobserve(el);
+                }
+            });
+        };
+    }, [useCaseData]);
+
+    // Ensure first section is visible and active on page load
+    useEffect(() => {
+        if (useCaseData?.sections && activeSection) {
+            // Small delay to ensure page is rendered
+            setTimeout(() => {
+                setVisibleElements(prev => new Set([...prev, 'hero-section', activeSection]));
+            }, 100);
+        }
+    }, [useCaseData, activeSection]);
+
     const handleNavClick = (sectionId) => {
         setActiveSection(sectionId);
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Get the current scroll position
+            const startPosition = window.pageYOffset;
+            const targetPosition = element.offsetTop - 100; // 100px offset from top
+            const distance = targetPosition - startPosition;
+            const duration = 1500; // 1.5 seconds for slower animation
+            let start = null;
+
+            // Easing function for smooth animation
+            const easeInOutCubic = (t) => {
+                return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            };
+
+            // Animation function
+            const animateScroll = (timestamp) => {
+                if (!start) start = timestamp;
+                const elapsed = timestamp - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeInOutCubic(progress);
+                
+                window.scrollTo(0, startPosition + distance * easedProgress);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            };
+
+            // Start the animation
+            requestAnimationFrame(animateScroll);
         }
+    };
+
+    const handleLearnMore = (useCaseId) => {
+        navigate(`/usecase/${useCaseId}`);
+    };
+
+    const handleImageLoad = () => {
+        setImageLoading(false);
+        setImageLoaded(true);
+    };
+
+    const handleImageError = (e) => {
+        setImageLoading(false);
+        e.target.style.display = 'none';
     };
 
     if (loading) {
@@ -156,13 +257,21 @@ export default function UseCaseDetail() {
                     {/* Left Sidebar Navigation */}
                     <aside className="w-full lg:w-1/5 mb-8 lg:mb-0">
                         <div className="sticky top-4 lg:top-12">
-                            <nav>
+                            <nav className={`transition-all duration-1000 ease-out ${
+                                useCaseData ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                            }`}>
                                 <ul className="flex flex-row lg:flex-col space-x-2 lg:space-x-0 lg:space-y-1 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
-                                    {useCaseData.sections.map(section => (
-                                        <li key={section.id} className="flex-shrink-0 lg:flex-shrink">
+                                    {useCaseData.sections.map((section, index) => (
+                                        <li 
+                                            key={section.id} 
+                                            className={`flex-shrink-0 lg:flex-shrink transition-all duration-500 ease-out ${
+                                                useCaseData ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                                            }`}
+                                            style={{ transitionDelay: `${index * 100}ms` }}
+                                        >
                                             <button
                                                 onClick={() => handleNavClick(section.id)}
-                                                className={`w-full text-left px-3 sm:px-4 py-2 sm:py-3 lg:py-4 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap lg:whitespace-normal ${
+                                                className={`w-full text-left px-3 sm:px-4 py-2 sm:py-3 lg:py-4 rounded-[14px] text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap lg:whitespace-normal ${
                                                     activeSection === section.id
                                                         ? 'bg-white text-gray-600 font-semibold'
                                                         : 'text-gray-700 hover:bg-white/20 hover:text-gray-800'
@@ -180,7 +289,11 @@ export default function UseCaseDetail() {
                     {/* Main Content */}
                     <main className="w-full lg:w-4/5">
                         <div className="space-y-8 sm:space-y-10 lg:space-y-12">
-                            <div>
+                            <div id="hero-section" className={`fade-in-element transition-all duration-1000 ease-out ${
+                                visibleElements.has('hero-section') 
+                                    ? 'opacity-100 translate-y-0' 
+                                    : 'opacity-0 translate-y-8'
+                            }`}>
                                 <p className="text-xs sm:text-sm font-semibold px-3 sm:px-4 text-gray-600 uppercase tracking-wider mb-2 sm:mb-3 bg-green-200 rounded-full py-1 w-fit">
                                     {useCaseData.category} Use Case
                                 </p>
@@ -191,14 +304,27 @@ export default function UseCaseDetail() {
                                 {/* Display the use case image */}
                                 {useCaseData.image && (
                                     <div className="mt-6 mb-6">
-                                        <div className="w-full max-w-6xl mx-auto">
+                                        <div className="w-full max-w-6xl mx-auto relative">
+                                            {/* Loading skeleton */}
+                                            {imageLoading && (
+                                                <div className="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse rounded-lg shadow-lg">
+                                                    <div className="flex items-center justify-center h-full">
+                                                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            
+                                            {/* Actual image */}
                                             <img 
                                                 src={useCaseData.image} 
                                                 alt={useCaseData.title}
-                                                className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg"
-                                                onError={(e) => {
-                                                    e.target.style.display = 'none';
-                                                }}
+                                                className={`w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg transition-all duration-700 ease-out ${
+                                                    imageLoaded && !imageLoading 
+                                                        ? 'opacity-100 scale-100' 
+                                                        : 'opacity-0 scale-95'
+                                                } ${imageLoading ? 'absolute inset-0' : ''}`}
+                                                onLoad={handleImageLoad}
+                                                onError={handleImageError}
                                             />
                                         </div>
                                     </div>
@@ -211,7 +337,11 @@ export default function UseCaseDetail() {
 
                             {/* Dynamic Diagram Section - Only for supply-chain */}
                             {useCaseData.id === 'supply-chain' && (
-                                <div className="p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+                                <div id="diagram-section" className={`fade-in-element p-4 sm:p-6 lg:p-8 relative overflow-hidden transition-all duration-1000 ease-out delay-200 ${
+                                    visibleElements.has('diagram-section') 
+                                        ? 'opacity-100 translate-y-0' 
+                                        : 'opacity-0 translate-y-8'
+                                }`}>
                                     <div className="flex flex-col sm:flex-row justify-between items-center relative z-10 space-y-6 sm:space-y-0">
                                         <div className="text-center w-full sm:w-1/3">
                                             <div className="mx-auto bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-md mb-3">
@@ -242,8 +372,17 @@ export default function UseCaseDetail() {
 
                             {/* Dynamic Text Sections */}
                             <article className="space-y-6 sm:space-y-8 lg:space-y-10 prose max-w-none prose-p:text-gray-600 prose-headings:text-gray-900">
-                                {useCaseData.sections.map((section) => (
-                                    <section key={section.id} id={section.id}>
+                                {useCaseData.sections.map((section, index) => (
+                                    <section 
+                                        key={section.id} 
+                                        id={section.id}
+                                        className={`fade-in-element transition-all duration-1000 ease-out ${
+                                            visibleElements.has(section.id) 
+                                                ? 'opacity-100 translate-y-0' 
+                                                : 'opacity-0 translate-y-8'
+                                        }`}
+                                        style={{ transitionDelay: `${(index + 1) * 200}ms` }}
+                                    >
                                         <h2 className="text-lg sm:text-xl font-semibold">{section.title}</h2>
                                         <p className="text-sm sm:text-base">{section.content}</p>
                                         
@@ -292,37 +431,28 @@ export default function UseCaseDetail() {
 
                 {/* Related Use Cases Section */}
                 {relatedUseCases.length > 0 && (
-                    <section className="mt-12 sm:mt-16 lg:mt-20">
+                    <section id="related-section" className={`fade-in-element mt-12 sm:mt-16 lg:mt-20 transition-all duration-1000 ease-out delay-500 ${
+                        visibleElements.has('related-section') 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-8'
+                    }`}>
                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Other Use Cases</h2>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-none lg:max-w-6xl ml-40">
-                            {relatedUseCases.map((relatedCase) => (
-                                <Link
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 justify-items-start">
+                            {relatedUseCases.map((relatedCase, index) => (
+                                <div
                                     key={relatedCase.id}
-                                    to={`/usecase/${relatedCase.id}`}
-                                    className="bg-white rounded-xl shadow-sm p-6 sm:p-8 lg:p-12 hover:shadow-lg transition-shadow duration-300 group"
+                                    className={`transition-all duration-800 ease-out ${
+                                        visibleElements.has('related-section') 
+                                            ? 'opacity-100 translate-y-0' 
+                                            : 'opacity-0 translate-y-8'
+                                    }`}
+                                    style={{ transitionDelay: `${600 + (index * 150)}ms` }}
                                 >
-                                    <div className="w-full h-48 sm:h-56 lg:h-72 bg-gray-200 rounded-md mb-4 sm:mb-6 overflow-hidden">
-                                        {relatedCase.image && (
-                                            <img 
-                                                src={relatedCase.image} 
-                                                alt={relatedCase.title}
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                                onError={(e) => {
-                                                    e.target.style.display = 'none';
-                                                }}
-                                            />
-                                        )}
-                                    </div>
-                                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
-                                        {relatedCase.title}
-                                    </h3>
-                                    <p className="text-gray-600 mb-3 sm:mb-4 text-base sm:text-lg">
-                                        {relatedCase.summary}
-                                    </p>
-                                    <span className="font-semibold text-blue-600 hover:text-blue-700 transition-colors text-sm sm:text-base">
-                                        Learn More &rarr;
-                                    </span>
-                                </Link>
+                                    <UseCaseCard
+                                        useCase={relatedCase}
+                                        onLearnMore={handleLearnMore}
+                                    />
+                                </div>
                             ))}
                         </div>
                     </section>

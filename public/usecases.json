@@ -51,7 +51,7 @@
         ]
       }
     ],
-    "relatedUseCases": ["agentic-procurement", "pricing-intelligence"]
+    "relatedUseCases": ["agentic-procurement", "pricing-intelligence", "smart-inventory"]
   },
   "agentic-procurement": {
     "id": "agentic-procurement",
@@ -108,7 +108,7 @@
         "additionalContent": "With Agentic AI, you're not just automating tasks — you're building a self-optimizing procurement function that evolves with your business."
       }
     ],
-    "relatedUseCases": ["ai-forecasting", "pricing-intelligence"]
+    "relatedUseCases": ["ai-forecasting", "pricing-intelligence", "agentic-logistics"]
   },
   "pricing-intelligence": {
     "id": "pricing-intelligence",
@@ -161,7 +161,7 @@
         "additionalContent": "With AI agents, pricing moves from guesswork to a proactive, data-driven strategy that powers resilience across the supply chain."
       }
     ],
-    "relatedUseCases": ["agentic-procurement", "agentic-logistics"]
+    "relatedUseCases": ["agentic-procurement", "agentic-logistics", "smart-inventory"]
   },
   "agentic-logistics": {
     "id": "agentic-logistics",
@@ -207,7 +207,7 @@
         "content": "The AI-driven system made logistics smarter by giving full vehicle visibility, cutting downtime with predictive maintenance, improving fuel use, and optimizing assets. Smart routing and pricing boosted on-time deliveries and profits, while a unified dashboard lowered costs and improved customer satisfaction."
       }
     ],
-    "relatedUseCases": ["smart-inventory", "pricing-intelligence"]
+    "relatedUseCases": ["smart-inventory", "pricing-intelligence", "agentic-procurement"]
   },
   "smart-inventory": {
     "id": "smart-inventory",
@@ -253,7 +253,7 @@
         "content": "AI-powered inventory management delivers more than efficiency—it creates a competitive edge. By reducing errors through automation, predicting demand for precise stock levels, and turning data into actionable insights, businesses lower storage costs, prevent stockouts, and avoid overstocking. Real-time tracking ensures agility, while scalability allows the system to adapt seamlessly to fluctuating demand. The result is inventory that is smarter, leaner, and built for modern supply chain resilience."
       }
     ],
-    "relatedUseCases": ["ai-forecasting", "agentic-logistics"]
+    "relatedUseCases": ["ai-forecasting", "agentic-logistics", "pricing-intelligence"]
   },
   "smarter-planning": {
     "id": "smarter-planning",
@@ -307,7 +307,7 @@
         ]
       }
     ],
-    "relatedUseCases": ["data-preparation", "agile-development"]
+    "relatedUseCases": ["data-preparation", "agile-development", "automated-testing"]
   },
   "data-preparation": {
     "id": "data-preparation",
@@ -358,7 +358,7 @@
         ]
       }
     ],
-    "relatedUseCases": ["smarter-planning", "agile-development"]
+    "relatedUseCases": ["smarter-planning", "agile-development", "automated-testing"]
   },
   "agile-development": {
     "id": "agile-development",
@@ -396,7 +396,7 @@
         "content": "Say hello to logic-driven development."
       }
     ],
-    "relatedUseCases": ["automated-testing", "data-preparation"]
+    "relatedUseCases": ["automated-testing", "deployment-automation", "data-preparation"]
   },
   "automated-testing": {
     "id": "automated-testing",
@@ -444,7 +444,7 @@
         "additionalContent": "The result: reliable, high-quality software delivered at speed."
       }
     ],
-    "relatedUseCases": ["agile-development", "deployment-automation"]
+    "relatedUseCases": ["agile-development", "deployment-automation", "smarter-planning"]
   },
   "deployment-automation": {
     "id": "deployment-automation",
@@ -498,6 +498,6 @@
         "additionalContent": "This paradigm unlocks the future of software deployment, where releases are faster, safer, and fully autonomous—empowering organizations to innovate without bottlenecks."
       }
     ],
-    "relatedUseCases": ["automated-testing", "agile-development"]
+    "relatedUseCases": ["automated-testing", "agile-development", "data-preparation"]
   }
 }
