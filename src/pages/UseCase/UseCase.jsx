@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import CTASection from "../Home/CTASection";
 import useCaseData from "../../data/usecase.json";
 import UseCaseCard from "../../components/UseCaseCard";
+import Button from "../../components/ui/Button";
 
 // Main App component
 export const UseCase = () => {
