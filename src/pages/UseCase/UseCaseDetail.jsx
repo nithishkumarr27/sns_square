@@ -146,7 +146,7 @@ export default function UseCaseDetail() {
         <div 
             className="min-h-screen font-sans text-gray-800"
             style={{
-                background: 'linear-gradient(180deg, #aab6e2bd 0px, #c2cce79f 100px, #FFFFFF 200px)'
+                background: 'linear-gradient(180deg, #aab6e2bd 0px, #c2cce79f 100px, #e9e9e9d3 200px)'
             }}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
@@ -173,7 +173,7 @@ export default function UseCaseDetail() {
                                                 onClick={() => handleNavClick(section.id)}
                                                 className={`w-full text-left px-3 sm:px-4 py-2 sm:py-3 lg:py-4 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap lg:whitespace-normal ${
                                                     activeSection === section.id
-                                                        ? 'bg-gray-100 text-gray-600 font-semibold'
+                                                        ? 'bg-white text-gray-600 font-semibold'
                                                         : 'text-gray-700 hover:bg-white/20 hover:text-gray-800'
                                                 }`}
                                             >
@@ -196,6 +196,23 @@ export default function UseCaseDetail() {
                                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 leading-tight">
                                     {useCaseData.heroTitle}
                                 </h1>
+                                
+                                {/* Display the use case image */}
+                                {useCaseData.image && (
+                                    <div className="mt-6 mb-6">
+                                        <div className="w-full max-w-4xl mx-auto">
+                                            <img 
+                                                src={useCaseData.image} 
+                                                alt={useCaseData.title}
+                                                className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                
                                 <p className="text-lg text-gray-700 mt-4">
                                     {useCaseData.description}
                                 </p>
@@ -285,8 +302,8 @@ export default function UseCaseDetail() {
                 {/* Related Use Cases Section */}
                 {relatedUseCases.length > 0 && (
                     <section className="mt-12 sm:mt-16 lg:mt-20">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Related Use Cases</h2>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-none lg:max-w-6xl">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Other Use Cases</h2>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-none lg:max-w-6xl ml-40">
                             {relatedUseCases.map((relatedCase) => (
                                 <Link
                                     key={relatedCase.id}
