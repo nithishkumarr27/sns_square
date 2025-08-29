@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../ui/Button';
+import Button from "./ui/Button";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,29 +31,33 @@ const Header = () => {
           </button>
 
           {/* Navigation Menu */}
-          <nav className={`${menuOpen ? 'block' : 'hidden'} lg:block absolute lg:relative top-full lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-global-7 lg:bg-transparent shadow-lg lg:shadow-none z-50`}>
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-8 p-4 lg:p-0">
+          <nav
+            className={`${
+              menuOpen ? 'block' : 'hidden'
+            } lg:flex absolute lg:relative top-full lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-global-7 lg:bg-transparent shadow-lg lg:shadow-none z-50`}
+          >
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-8 p-4 lg:p-0 w-full">
               <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8">
-                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-5 font-manrope">
+                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-5 font-manrope cursor-pointer hover:text-blue-600">
                   Home
                 </span>
-                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-4 font-manrope">
+                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-4 font-manrope cursor-pointer hover:text-blue-600">
                   Solutions
                 </span>
-                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-4 font-manrope">
+                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-4 font-manrope cursor-pointer hover:text-blue-600">
                   Use Case
                 </span>
-                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-4 font-manrope">
+                <span className="text-sm md:text-base font-bold leading-[18px] md:leading-[22px] text-center text-global-4 font-manrope cursor-pointer hover:text-blue-600">
                   Life at SNS Square
                 </span>
               </div>
-              
-              {/* Contact Button */}
+
+              {/* Contact Button (always right) */}
               <Button
                 variant="secondary"
                 size="small"
-                className="rounded-[18px] px-6 py-1 text-sm md:text-base font-bold"
-                onClick={() => {}} // Add missing required onClick prop
+                className="rounded-[18px] px-6 py-1 text-sm md:text-base font-bold bg-black text-white hover:bg-blue-600 transition-colors duration-300"
+                onClick={() => {}}
               >
                 Contact us
               </Button>

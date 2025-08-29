@@ -104,7 +104,7 @@ const Home = () => {
         </div>
       </div>
      
-     <Lock/>
+     {/* <Lock/> */}
       {/* Challenge Section */}
       {/* <div className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -152,7 +152,7 @@ const Home = () => {
       </div> */}
      
       {/* Use Cases Section */}
-      <div className="py-6 lg:py-6 px-4 sm:px-6 lg:px-8">
+      <div className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Background with decorative elements */}
           <div className="relative bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 lg:p-16 overflow-hidden">
