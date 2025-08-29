@@ -1,143 +1,93 @@
-import React from 'react';
+// src/components/Footer.jsx
+import { Linkedin, Youtube } from "lucide-react";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="w-full bg-footer-1 mt-[50px] md:mt-[100px] p-4 md:p-6">
-      <div className="w-full max-w-[1440px] mx-auto">
-        <div className="flex flex-col justify-start items-center w-full mt-[21px] md:mt-[42px]">
-          {/* Main Footer Content */}
-          <div className="flex flex-col lg:flex-row justify-between items-start w-full ml-2 md:ml-[10px]">
-            {/* Logo */}
-            <div className="w-full lg:w-[16%] mb-8 lg:mb-0">
-              <img 
-                src="/images/img_sq_white_1_2.png" 
-                alt="SNS Square White Logo" 
-                className="w-[120px] h-[82px] md:w-[192px] md:h-[130px]"
-              />
-            </div>
+    <footer className="bg-[#0A1B3E] text-white">
+      {/* Top CTA Section */}
+     
 
-            {/* Footer Links */}
-            <div className="flex flex-col md:flex-row justify-between items-start w-full lg:w-[70%] gap-8 md:gap-4">
-              {/* Solutions Column */}
-              <div className="flex flex-col gap-[6px] justify-start items-start w-full md:w-[22%]">
-                <h3 className="text-sm md:text-[15px] font-medium leading-[18px] md:leading-[20px] text-footer-1 font-inter">
-                  Solutions
-                </h3>
-                <p className="text-xs md:text-[14px] font-normal leading-[28px] md:leading-[36px] text-global-12 w-full font-inter">
-                  Smart City & Manufacturing<br/>
-                  Healthcare<br/>
-                  Agriculture & Food<br/>
-                  Retail FMCG<br/>
-                  Automotive & Aerospace<br/>
-                  Defense, Government, Legal<br/>
-                  Real Estate<br/>
-                  Sports, Media & Entertainment<br/>
-                  BFSI – Fintech/Banking<br/>
-                  Power, Oil, Energy<br/>
-                  Personal Services
-                </p>
-              </div>
+      {/* Footer Links */}
+      <div className="max-w-7xl mx-auto px-6 pt-20 pb-20 grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Logo */}
+        <div>
+          <img
+            src="public/images/img_sq_white_1_2.png" // Replace with your actual logo path
+            alt="SNS Square"
+            className="w-36 mb-6"
+          />
+        </div>
 
-              {/* Use Cases and Company Columns */}
-              <div className="flex flex-col gap-6 md:gap-8 justify-start items-start w-full md:w-[64%]">
-                {/* Use Cases & Company Row */}
-                <div className="flex flex-col md:flex-row justify-between items-start w-full md:w-[62%] gap-6 md:gap-0">
-                  {/* Use Cases */}
-                  <div className="flex flex-col gap-3 justify-center items-start w-full md:w-[50%]">
-                    <h3 className="text-sm md:text-[15px] font-medium leading-[17px] md:leading-[19px] text-footer-1 font-inter">
-                      Use Cases
-                    </h3>
-                    <div className="flex flex-row justify-start items-center w-full">
-                      <span className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter">
-                        Supply Chain
-                      </span>
-                    </div>
-                    <div className="flex flex-row justify-start items-center w-full">
-                      <span className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter">
-                        IT Solution
-                      </span>
-                    </div>
-                  </div>
+        {/* Solutions */}
+        <div>
+          <h3 className="font-semibold text-blue-400 mb-4">Solutions</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>Smart City & Manufacturing</li>
+            <li>Healthcare</li>
+            <li>Agriculture & Food</li>
+            <li>Retail FMCG</li>
+            <li>Automotive & Aerospace</li>
+            <li>Defense, Government, Legal</li>
+            <li>Real Estate</li>
+            <li>Sports, Media & Entertainment</li>
+            <li>BFSI – Fintech/Banking</li>
+            <li>Power, Oil, Energy</li>
+            <li>Personal Services</li>
+          </ul>
+        </div>
 
-                  {/* Company */}
-                  <div className="flex flex-col gap-3 justify-start items-start w-full md:w-[36%]">
-                    <h3 className="text-sm md:text-[15px] font-medium leading-[17px] md:leading-[19px] text-footer-1 font-inter">
-                      Company
-                    </h3>
-                    <ul className="flex flex-col gap-[14px] justify-start items-start w-full ml-1">
-                      <li>
-                        <a href="#" className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter hover:text-footer-1 transition-colors">
-                          Solutions
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter hover:text-footer-1 transition-colors">
-                          Use Case
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter hover:text-footer-1 transition-colors">
-                          Life at SNS Square
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter hover:text-footer-1 transition-colors">
-                          Resources
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-xs md:text-[13px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter hover:text-footer-1 transition-colors">
-                          Contact us
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+        {/* Use Cases */}
+        <div>
+          <h3 className="font-semibold text-blue-400 mb-4">Use Cases</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>Supply Chain</li>
+            <li>IT Solution</li>
+          </ul>
 
-                {/* Address & Email */}
-                <div className="flex flex-col justify-start items-start w-full md:w-[60%]">
-                  <h3 className="text-sm md:text-[15px] font-medium leading-[17px] md:leading-[19px] text-footer-1 font-inter">
-                    Address
-                  </h3>
-                  <p className="text-xs md:text-[14px] font-normal leading-[20px] md:leading-[25px] text-global-12 w-full font-inter mt-[6px]">
-                    BLOCK-L, Embassy Tech Village, Outer Ring Rd, Devarabisanahalli, Bellandur, Bengaluru, Karnataka 560103
-                  </p>
-                  <h3 className="text-sm md:text-[15px] font-medium leading-[17px] md:leading-[19px] text-footer-1 font-inter mt-[18px]">
-                    Email
-                  </h3>
-                  <p className="text-xs md:text-[14px] font-normal leading-[15px] md:leading-[17px] text-global-12 font-inter mt-[10px]">
-                    info@snssquare.com
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h3 className="font-semibold text-blue-400 mt-6 mb-4">Company</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>Solutions</li>
+            <li>Use Case</li>
+            <li>Life at SNS Square</li>
+            <li>Resources</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
 
-          {/* Divider Line */}
-          <div className="w-full h-[1px] bg-footer-2 mt-[24px] md:mt-[48px] mr-4 md:mr-8"></div>
+        {/* Contact */}
+        <div>
+          <h3 className="font-semibold text-blue-400 mb-4">Address</h3>
+          <p className="text-gray-300 text-sm mb-4">
+            BLOCK-L, Embassy Tech Village, Outer Ring Rd, Devarabisanahalli,
+            Bellandur, Bengaluru, Karnataka 560103
+          </p>
 
-          {/* Copyright & Social Links */}
-          <div className="flex flex-col md:flex-row justify-between items-center w-full mt-[14px] mr-4 md:mr-[22px] mb-[18px] ml-2 md:ml-[10px] gap-4 md:gap-0">
-            <span className="text-[10px] md:text-[11px] font-normal leading-[13px] md:leading-[15px] text-global-12 font-inter">
-              © 2025 SNS Square. All rights reserved.
-            </span>
-            <div className="flex flex-row gap-4 md:gap-6 justify-center items-center">
-              <img 
-                src="/images/img_clip_path_group.svg" 
-                alt="Social Media Icon" 
-                className="w-4 h-4"
-              />
-              <img 
-                src="/images/img_svg.svg" 
-                alt="Social Media Icon" 
-                className="w-4 h-4"
-              />
-            </div>
-          </div>
+          <h3 className="font-semibold mb-2 text-blue-400">Email</h3>
+          <p className="text-gray-300 text-sm mb-6">info@snssquare.com</p>
+
+
         </div>
       </div>
+
+      {/* Bottom copyright */}
+      <div className="max-w-7xl mx-auto border-t border-gray-700 px-6 pb-10 flex flex-col md:flex-row justify-between items-center">
+        <div className="text-center text-gray-400 text-sm  py-4">
+        © 2025 SNS Square. All rights reserved.
+        </div>
+        <div>
+        {/* Social Icons */}
+          <div className="flex space-x-4">
+            <a href="#" className="hover:text-blue-400">
+              <Linkedin size={20} />
+            </a>
+            <a href="#" className="hover:text-red-500">
+              <Youtube size={20} />
+            </a>
+          </div>
+       </div>
+          
+      </div>
+      
     </footer>
   );
-};
-
-export default Footer;
+}
