@@ -19,7 +19,7 @@ export const UseCase = () => {
       categoryInfo: {
         id: "supply-chain",
         label: "Supply Chain",
-        icon: "/images/SupplyChain.svg"
+        icon: "/icons/supply.svg"
       }
     },
     "information-technology": {
@@ -27,7 +27,31 @@ export const UseCase = () => {
       categoryInfo: {
         id: "information-technology",
         label: "Information Technology", 
-        icon: "/images/InformationTechnology.svg"
+        icon: "/icons/it.svg"
+      }
+    },
+    "healthcare": {
+      data: Object.values(useCaseData).filter(uc => uc.category === "Healthcare"),
+      categoryInfo: {
+        id: "healthcare",
+        label: "Healthcare",
+        icon: "/icons/healthcare.svg"
+      }
+    },
+    "human-resource": {
+      data: Object.values(useCaseData).filter(uc => uc.category === "Human Resource"),
+      categoryInfo: {
+        id: "human-resource",
+        label: "Human Resource",
+        icon: "/icons/humanresource.svg"
+      }
+    },
+    "insurance": {
+      data: Object.values(useCaseData).filter(uc => uc.category === "Insurance"),
+      categoryInfo: {
+        id: "insurance",
+        label: "Insurance",
+        icon: "/icons/humanresource.svg"
       }
     }
   };
@@ -97,7 +121,7 @@ export const UseCase = () => {
                 <h1 className="font-sora font-semibold text-black text-5xl md:text-6xl lg:text-[54px] tracking-tight md:tracking-[-0.69px] leading-tight md:leading-[54px]">
                   Partnered Progress:{" "}
                   <span className="text-[#064EE3]">Agentic AI</span>{" "}
-                  Solutions for Every Sector.
+                  Solutions for Every Sector
                 </h1>
               </div>
             </div>

@@ -85,18 +85,18 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
 
         <div className="flex flex-col w-full items-start gap-4 md:gap-[18px]">
           <div className="flex flex-col items-start gap-3 w-full">
-            <div className="font-sora font-semibold text-black text-lg md:text-[22px] tracking-0 leading-normal">
+            <div className="font-sora font-semibold text-black text-[22px] tracking-0 leading-normal">
               {useCase.title}
             </div>
 
-            <div className="font-inter font-normal text-[#303030] text-base md:text-[22px] tracking-0 leading-normal">
+            <div className="font-inter font-normal text-[#303030] text-[22px] tracking-0 leading-normal">
               <div className={`${isExpanded ? '' : 'line-clamp-3'} transition-all duration-300`}>
                 {useCase.description}
               </div>
               {useCase.description && useCase.description.length > 120 && (
                 <button
                   onClick={toggleExpanded}
-                  className="text-[#3e57da] hover:underline mt-1 text-sm"
+                  className="text-[#3E57DA] hover:underline mt-1 text-sm"
                 >
                   {isExpanded ? 'Show less' : 'Show more...'}
                 </button>
