@@ -150,16 +150,7 @@ export default function UseCaseDetail() {
             }}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
-                {/* Back Button */}
-                <div className="mb-6 bg-white mr-[1300px] p-2 rounded-md">
-                    <button
-                        onClick={() => navigate('/usecase')}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors font-medium"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        Back to Use Cases
-                    </button>
-                </div>
+                
 
                 <div className="flex flex-col lg:flex-row lg:space-x-8 xl:space-x-12">
                     {/* Left Sidebar Navigation */}
@@ -200,7 +191,7 @@ export default function UseCaseDetail() {
                                 {/* Display the use case image */}
                                 {useCaseData.image && (
                                     <div className="mt-6 mb-6">
-                                        <div className="w-full max-w-4xl mx-auto">
+                                        <div className="w-full max-w-6xl mx-auto">
                                             <img 
                                                 src={useCaseData.image} 
                                                 alt={useCaseData.title}
