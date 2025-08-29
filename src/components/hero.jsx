@@ -1,6 +1,15 @@
 export default function Hero() {
   return (
-    <section aria-labelledby="hero-heading" className="relative bg-gradient-to-b from-[#EEF4FF] to-white w-screen">
+    <section 
+      aria-labelledby="hero-heading" 
+      className="relative bg-gradient-to-b from-[#EEF4FF] to-white w-screen"
+      style={{
+        backgroundImage: `url('/images/hero-pattern.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
       <div className="w-full px-0 py-24 md:py-32 lg:py-40">
         <header className="text-center">
           <h1
@@ -12,7 +21,7 @@ export default function Hero() {
         </header>
 
         <p className="mx-auto mt-10 max-w-5xl text-pretty text-center font-sans text-lg sm:text-xl md:text-2xl leading-relaxed text-black/90 font-medium">
-          We are a culture of bold thinkers and fearless doers. Here, boundaries fade, routines transform into freedom, and creativity flows without limits. Our ecosystem fuels energy, nurtures imagination, and turns ideas into extraordinary outcomes.
+          We are a culture of bold thinkers and fearless doers. Here, boundaries fade, routines transform into freedom, and creativity flows without limits. 
         </p>
 
         <div className="mt-12 flex justify-center">
