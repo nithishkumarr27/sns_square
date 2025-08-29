@@ -86,18 +86,18 @@ export const UseCase = () => {
         {/* Background blur effect */}
         <div className="absolute w-[300px] h-[300px] md:w-[470px] md:h-[470px] top-0 left-1/2 transform -translate-x-1/2 md:left-[485px] md:transform-none bg-[#1357e591] rounded-full blur-[400px]" />
 
-        <div className="flex flex-col items-center gap-10 md:gap-20 px-4 md:px-8 lg:px-0">
+        <div className="flex flex-col items-center gap-10 md:gap-20  lg:px-0">
           {/* Hero Section */}
-          <div className="relative w-full max-w-7xl h-[300px] md:h-[480px] bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url(/images/UsecaseBackground.svg)"}}>
+          <div className="relative w-full h-[300px] md:h-[440px] bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url(/images/UsecaseBackground.svg)"}}>
             {/* Decorative border element */}
             <div className="absolute w-[60px] h-[60px] md:w-[88px] md:h-[83px] top-[40px] left-[20px] md:top-[84px] md:left-[39px] border-2 border-solid border-transparent shadow-[inset_-5px_-5px_250px_#ffffff05] backdrop-blur-[21px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(21px)_brightness(100%)] [border-image:linear-gradient(169deg,rgba(255,255,255,0.4)_0%,rgba(238,237,237,0.2)_100%)_1] [background:radial-gradient(50%_50%_at_0%_0%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]" />
 
             <div className="flex flex-col items-center justify-center gap-6 md:gap-[55px] absolute inset-0 px-4 md:px-8">
               <div className="text-center max-w-4xl">
-                <h1 className="font-sora font-semibold text-black text-3xl md:text-4xl lg:text-[54px] tracking-tight md:tracking-[-0.69px] leading-tight md:leading-[54px]">
-                  We partner with you in your{" "}
-                  <span className="text-[#242424]">Agentic Solution</span>{" "}
-                  Journey.
+                <h1 className="font-sora font-semibold text-black text-5xl md:text-6xl lg:text-[54px] tracking-tight md:tracking-[-0.69px] leading-tight md:leading-[54px]">
+                  Partnered Progress:{" "}
+                  <span className="text-[#064EE3]">Agentic AI</span>{" "}
+                  Solutions for Every Sector.
                 </h1>
               </div>
             </div>
@@ -112,7 +112,7 @@ export const UseCase = () => {
                   key={filter.id}
                   variant="ghost"
                   onClick={() => handleCategoryClick(filter.id)}
-                  className={`flex items-center justify-start gap-2.5 pl-4 pr-6 py-7 md:py-9 w-full rounded-2xl overflow-hidden ${
+                  className={`flex items-center justify-start gap-2.5 pl-4 pr-6 py-5 md:py-7 w-full rounded-2xl overflow-hidden ${
                     filter.isActive ? "bg-[#e6edfc]" : "bg-transparent"
                   }`}
                 >

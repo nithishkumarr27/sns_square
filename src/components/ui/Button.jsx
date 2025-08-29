@@ -12,7 +12,7 @@ const Button = ({
   className = '',
   ...props 
 }) => {
-  const baseClasses = 'font-semibold rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
+  const baseClasses = 'font-semibold rounded transition-all duration-200 focus:outline-none focus:ring-0 focus:ring-offset-0 cursor-pointer';
   
   const variants = {
     primary: 'bg-[linear-gradient(90deg,#064ee3_0%,_#3d76ec_100%)] text-global-12 hover:opacity-90 focus:ring-blue-500',
