@@ -14,7 +14,7 @@ const contentSections = [
     cardPosition: "left",
     cardStyle: "rounded-[0px_60px_0px_0px]",
     imageWidth: "w-[1032px]",
-    imageLeft: "left-[400px]",
+    imageLeft: "left-[390px]",
   },
   {
     id: 2,
@@ -36,9 +36,9 @@ const contentSections = [
     imageSrc: "/images/IMG_7778.png",
     imagePosition: "right",
     cardPosition: "left",
-    cardStyle: "rounded-[60px_0px_0px_0px] rotate-180",
+    cardStyle: "rounded-[0px_0px_0px_60px] rotate-180",
     imageWidth: "w-[767px]",
-    imageLeft: "left-[455px]",
+    imageLeft: "left-[453px]",
     textRotate: "rotate-180",
   },
   {
@@ -55,7 +55,7 @@ const contentSections = [
   },
   {
     id: 5,
-    title: "Wellness at the Core, SNS SPINE",
+    title: "Wellness at the Core, SNS Square",
     description:
       "SPINE, our five-level hub, keeps energy alive with yoga, sports, music, art, and spaces to recharge. It ensures sharp minds, strong bodies, and unstoppable spirits that fuel creativity every day.",
     imageSrc: null,
@@ -74,9 +74,9 @@ const contentSections = [
     imageSrc: "/images/IMG_6676.png",
     imagePosition: "left",
     cardPosition: "right",
-    cardStyle: "rounded-[0px_60px_0px_0px] rotate-180",
+    cardStyle: "rounded-[0px_0px_60px_0px] rotate-180",
     imageWidth: "w-[786px]",
-    imageLeft: "left-0",
+    imageLeft: "left-[2px]",
     textRotate: "rotate-180",
   },
   {
@@ -87,7 +87,7 @@ const contentSections = [
     imageSrc: "/images/IMG_6586.png",
     imagePosition: "right",
     cardPosition: "left",
-    cardStyle: "rounded-[60px_0px_0px_0px] rotate-180",
+    cardStyle: "rounded-[0px_0px_0px_60px] rotate-180",
     imageWidth: "w-[786px]",
     imageLeft: "left-[436px]",
     textRotate: "rotate-180",
