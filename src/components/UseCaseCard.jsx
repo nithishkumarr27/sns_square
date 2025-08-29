@@ -91,9 +91,9 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
 
             <div className="font-inter font-normal text-[#303030] text-[22px] tracking-0 leading-normal">
               <div className={`${isExpanded ? '' : 'line-clamp-3'} transition-all duration-300`}>
-                {useCase.description}
+                {useCase.tagline}
               </div>
-              {useCase.description && useCase.description.length > 120 && (
+              {useCase.tagline && useCase.tagline.length > 120 && (
                 <button
                   onClick={toggleExpanded}
                   className="text-[#3E57DA] hover:underline mt-1 text-sm"

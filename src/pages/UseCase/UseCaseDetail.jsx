@@ -255,7 +255,7 @@ export default function UseCaseDetail() {
 
                 <div className="flex flex-col lg:flex-row lg:space-x-8 xl:space-x-12">
                     {/* Left Sidebar Navigation */}
-                    <aside className="w-full lg:w-1/5 mb-8 lg:mb-0">
+                    <aside className="w-full lg:w-2/7 mb-8 lg:mb-0">
                         <div className="sticky top-4 lg:top-12">
                             <nav className={`transition-all duration-1000 ease-out ${
                                 useCaseData ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
@@ -271,7 +271,7 @@ export default function UseCaseDetail() {
                                         >
                                             <button
                                                 onClick={() => handleNavClick(section.id)}
-                                                className={`w-full text-left px-3 sm:px-4 py-2 sm:py-3 lg:py-4 rounded-[14px] text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap lg:whitespace-normal ${
+                                                className={`w-full text-left px-3 sm:px-4 py-2 sm:py-3 lg:py-4 rounded-[14px] text-[18px] font-medium transition-colors duration-200 whitespace-nowrap lg:whitespace-normal ${
                                                     activeSection === section.id
                                                         ? 'bg-white text-gray-600 font-semibold'
                                                         : 'text-gray-700 hover:bg-white/20 hover:text-gray-800'
@@ -294,10 +294,10 @@ export default function UseCaseDetail() {
                                     ? 'opacity-100 translate-y-0' 
                                     : 'opacity-0 translate-y-8'
                             }`}>
-                                <p className="text-xs sm:text-sm font-semibold px-3 sm:px-4 text-black tracking-wider mb-2 sm:mb-3 bg-[#C5EDE0] rounded-full py-1 w-fit font-family-Sora">
+                                <p className="text-xs sm:text-xs font-semibold px-2 sm:px-2 text-black tracking-wider mb-2 sm:mb-3 bg-[#C5EDE0] rounded-full py-1 w-fit font-family-Sora">
                                     {useCaseData.category} Use Case
                                 </p>
-                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 leading-tight">
+                                <h1 className="text-[42px] font-bold text-blue-600 leading-tight">
                                     {useCaseData.heroTitle}
                                 </h1>
                                 
