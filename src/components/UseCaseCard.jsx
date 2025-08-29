@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { cn } from "../lib/utils";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
@@ -65,6 +65,12 @@ const CardContent = React.forwardRef(({ className, ...props }, ref) => (
 CardContent.displayName = "CardContent";
 
 const UseCaseCard = ({ useCase, onLearnMore }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <Card className="flex flex-col w-full max-w-[480px] mx-auto items-start p-4 md:p-5 bg-white rounded-3xl overflow-hidden shadow-[0px_2px_16px_#10182814] border-0">
       <CardContent className="flex flex-col items-start gap-6 w-full p-0">
@@ -84,7 +90,17 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
             </div>
 
             <div className="font-inter font-normal text-[#303030] text-base md:text-[22px] tracking-0 leading-normal">
-              {useCase.description}
+              <div className={`${isExpanded ? '' : 'line-clamp-3'} transition-all duration-300`}>
+                {useCase.description}
+              </div>
+              {useCase.description && useCase.description.length > 120 && (
+                <button
+                  onClick={toggleExpanded}
+                  className="text-[#3e57da] hover:underline mt-1 text-sm"
+                >
+                  {isExpanded ? 'Show less' : 'Show more...'}
+                </button>
+              )}
             </div>
           </div>
 
