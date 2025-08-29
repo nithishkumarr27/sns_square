@@ -99,8 +99,8 @@ export default function Page() {
     <main className="bg-[#ffffff] grid justify-items-center [align-items:start] w-screen">
       <Hero />
       
-      {/* Content Sections */}
-      <div className="bg-[#ffffff] w-[1440px] h-[4564px] relative">
+      {/* Desktop Content Sections - Hidden on Mobile */}
+      <div className="hidden lg:block bg-[#ffffff] w-[1440px] h-[4564px] relative">
         <section className="inline-flex items-center gap-2.5 px-[54px] py-[54px] absolute top-0 left-[109px] rounded-[32px] overflow-hidden bg-[linear-gradient(46deg,rgba(224,233,251,1)_0%,rgba(252,253,254,1)_100%)]">
           <div className="flex flex-col w-[1222px] items-start gap-6 relative overflow-hidden">
             {contentSections.map((section, index) => (
@@ -164,6 +164,45 @@ export default function Page() {
             ))}
           </div>
         </section>
+      </div>
+
+      {/* Mobile Content Sections - Only visible on Mobile/Tablet */}
+      <div className="block lg:hidden w-full px-4 py-8">
+        <div className="w-full max-w-md mx-auto space-y-6">
+          {contentSections.map((section, index) => (
+            <div key={`mobile-${section.id}`} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              {section.imageSrc && (
+                <div className="w-full h-48 overflow-hidden">
+                  <img
+                    className="w-full h-full object-cover"
+                    alt="Img"
+                    src={section.imageSrc}
+                  />
+                </div>
+              )}
+              
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-black mb-4 font-['Sora',_Helvetica] leading-tight">
+                  {section.title.split("\n").map((line, lineIndex) => (
+                    <React.Fragment key={lineIndex}>
+                      {line}
+                      {lineIndex < section.title.split("\n").length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+                </h2>
+                
+                <p className="text-sm text-gray-700 leading-relaxed font-['Sora',_Helvetica]">
+                  {section.description.split("\n").map((line, lineIndex) => (
+                    <React.Fragment key={lineIndex}>
+                      {line}
+                      {lineIndex < section.description.split("\n").length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   )
