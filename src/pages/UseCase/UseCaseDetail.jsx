@@ -8,7 +8,7 @@ const ListItem = ({ children }) => (
     <li className="flex items-start">
         <span aria-hidden="true" className="w-1 h-1 bg-gray-600 mr-3 mt-[16px] flex-shrink-0"></span>
         <span className="text-sm sm:text-base mt-1">{children}</span>
-    </li>
+    </li>    
 );
 
 // Main App Component
