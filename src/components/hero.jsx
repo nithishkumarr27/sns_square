@@ -10,24 +10,24 @@ export default function Hero() {
         backgroundRepeat: "no-repeat"
       }}
     >
-      <div className="w-full px-0 py-24 md:py-32 lg:py-40">
+      <div className="w-full px-4 sm:px-6 lg:px-0 py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40">
         <header className="text-center">
           <h1
             id="hero-heading"
-            className="text-balance font-sans font-extrabold tracking-tight text-black leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+            className="text-balance font-sans font-extrabold tracking-tight text-black leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl px-2 sm:px-0"
           >
             From <span className="text-[#1E63FF]">Brainstorms</span> to <span className="text-[#1E63FF]">Superstorms</span>.
           </h1>
         </header>
 
-        <p className="mx-auto mt-10 max-w-5xl text-pretty text-center font-sans text-lg sm:text-xl md:text-2xl leading-relaxed text-black/90 font-medium">
+        <p className="mx-auto mt-6 sm:mt-8 lg:mt-10 max-w-5xl text-pretty text-center font-sans text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-black/90 font-medium px-4 sm:px-6 lg:px-0">
           We are a culture of bold thinkers and fearless doers. Here, boundaries fade, routines transform into freedom, and creativity flows without limits. 
         </p>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center px-4 sm:px-0">
           <a
             href="#"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#1E63FF] to-[#1557F5] px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-semibold text-white shadow-sm transition-shadow hover:shadow-md focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1557F5]"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#1E63FF] to-[#1557F5] px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-sm transition-shadow hover:shadow-md focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1557F5] w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             Start Your Agentic Journey
           </a>
