@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRoutes from "./routes/AppRoutes";
-import CTA from "./components/CTA"; // Import the CTA component
+import CTASection from "./components/CTA"; // Import the CTA component
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -9,7 +9,7 @@ function App() {
       <main className="flex-grow">
         <AppRoutes />
       </main>
-      <CTA/>
+      <CTASection/>
       <Footer />
     </div>
   );

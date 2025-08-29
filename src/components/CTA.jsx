@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from './ui/Button';
+import { Button } from './ui/button';
 
 const CTASection = () => {
   return (
-    <section className="w-full mt-[50px] sm:mt-[80px] md:mt-[100px] mb-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full mt-8 mb-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[1224px] mx-auto">
 <div
   className="border border-[#e3e0e0] rounded-[32px] p-6 sm:p-8 md:p-12 bg-cover bg-center bg-no-repeat"

@@ -100,7 +100,7 @@ export default function Page() {
       <Hero />
       
       {/* Desktop Content Sections - Hidden on Mobile */}
-      <div className="hidden lg:block bg-[#ffffff] w-[1440px] h-[4564px] relative">
+      <div className="hidden lg:block bg-[#ffffff] w-[1440px] h-auto min-h-[3200px] relative mx-auto">
         <section className="inline-flex items-center gap-2.5 px-[54px] py-[54px] absolute top-0 left-[109px] rounded-[32px] overflow-hidden bg-[linear-gradient(46deg,rgba(224,233,251,1)_0%,rgba(252,253,254,1)_100%)]">
           <div className="flex flex-col w-[1222px] items-start gap-6 relative overflow-hidden">
             {contentSections.map((section, index) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../components/ui/Button';
+import { Button } from '../../components/ui/button';
 import Lock from "./Lock"
 const Home = () => {
   return (
