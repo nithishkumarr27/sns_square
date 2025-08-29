@@ -1,0 +1,34 @@
+{
+  "categoryFilter": {
+    "id": "supply-chain",
+    "label": "Supply Chain",
+    "icon": "",
+    "isActive": true
+  },
+  "useCases": [
+    {
+      "id": 1,
+      "title": "Supply Chain Optimization",
+      "description": "Improved delivery accuracy by 42% through autonomous logistics management",
+      "category": "supply-chain"
+    },
+    {
+      "id": 2,
+      "title": "Inventory Management",
+      "description": "Reduced stockouts by 35% with predictive inventory agents",
+      "category": "supply-chain"
+    },
+    {
+      "id": 3,
+      "title": "Warehouse Automation",
+      "description": "Increased efficiency by 28% with intelligent warehouse orchestration",
+      "category": "supply-chain"
+    },
+    {
+      "id": 4,
+      "title": "Demand Forecasting",
+      "description": "Enhanced forecast accuracy by 45% using adaptive AI models",
+      "category": "supply-chain"
+    }
+  ]
+}
