@@ -25,16 +25,16 @@ const StickyScrollSection = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex w-full min-h-[120vh] px-6 lg:px-20"
+      className="relative flex w-full min-h-[120vh] px-6 lg:px-[400px]"
     >
       {/* Left content */}
-      <div className="flex-1 flex mx-auto  flex-col justify-center space-y-20">
+      <div className="flex-1 flex mx-auto flex-col justify-center ">
         {/* First container */}
         <motion.div style={{ opacity: firstOpacity }}>
         
-        <div className="max-w-7xl lg:mt-[50px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-6">
+        <div className="max-w-full  ">
+          <div className="grid grid-cols-1  gap-12 lg:gap-16 items-center">
+            <div className="">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-black leading-tight">
                 The Biggest Challenge for Modern Enterprises is Mastering Complexity
               </h2>
@@ -49,8 +49,8 @@ const StickyScrollSection = () => {
         {/* Second container */}
         <motion.div style={{ opacity: secondOpacity }}>
             
-        <div className="max-w-7xl lg:mt-[-300px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-full ">
+          <div className="grid grid-cols-1  gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-black leading-tight">
                 Our Key to Unlock the Future: The Agentic Business Blueprint (ABB)
@@ -71,7 +71,9 @@ const StickyScrollSection = () => {
             key={showSecondImage ? "second" : "first"}
             src={showSecondImage ? "/images/puzzle_2.png" : "/images/puzzle.png"}
             alt="Sticky Visual"
-            className="w-[400px] h-auto rounded-2xl shadow-lg"
+           className={`w-[400px] h-auto rounded-2xl shadow-lg ${
+        !showSecondImage ? "mt-[-40px]" : "mt-20"
+      }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

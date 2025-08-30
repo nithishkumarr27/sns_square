@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full h-screen min-h-[800px] bg-gradient-to-br from-[#6366F1] via-[#8b9cf7] to-[#a5b4fc] overflow-hidden">
+      <div className="relative w-full h-screen min-h-[800px]  overflow-hidden">
         {/* Background Pattern */}
         <div 
           className="absolute inset-0 bg-cover  bg-center bg-no-repeat opacity-20"
