@@ -57,7 +57,7 @@ const contentSections = [
     id: 5,
     title: "Wellness at the Core, SNS Square",
     description:
-      "SPINE, our five-level hub, keeps energy alive with yoga, sports, music, art, and spaces to recharge. It ensures sharp minds, strong bodies, and unstoppable spirits that fuel creativity every day.",
+      "Our five-level hub, keeps energy alive with yoga, sports, music, art, and spaces to recharge. It ensures sharp minds, strong bodies, and unstoppable spirits that fuel creativity every day.",
     imageSrc: null,
     imagePosition: "right",
     cardPosition: "left",
