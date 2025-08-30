@@ -16,7 +16,7 @@ export default function Hero() {
               id="hero-heading"
               className="text-balance font-sans font-extrabold tracking-tight text-black leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl px-2 sm:px-0"
             >
-              From <span className="text-[#1E63FF]">Brainstorms</span> to <span className="text-[#1E63FF]">Superstorms</span>.
+              A <span className="text-[#1E63FF]">Culture </span> that Erupts into <span className="text-[#1E63FF]">Brilliance.</span>
             </h1>
           </header>
   

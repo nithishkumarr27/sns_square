@@ -1,8 +1,6 @@
 import React from "react";
 import Hero from "../components/hero"
-import Button from "../components/ui/Button";
 import { Card, CardContent } from "../components/ui/card";
-
 const contentSections = [
   {
     id: 1,
@@ -57,7 +55,7 @@ const contentSections = [
     id: 5,
     title: "Wellness at the Core, SNS Square",
     description:
-      "SPINE, our five-level hub, keeps energy alive with yoga, sports, music, art, and spaces to recharge. It ensures sharp minds, strong bodies, and unstoppable spirits that fuel creativity every day.",
+      "Our five-level hub, keeps energy alive with yoga, sports, music, art, and spaces to recharge. It ensures sharp minds, strong bodies, and unstoppable spirits that fuel creativity every day.",
     imageSrc: null,
     imagePosition: "right",
     cardPosition: "left",
@@ -93,15 +91,13 @@ const contentSections = [
     textRotate: "rotate-180",
   },
 ];
-
 export default function Page() {
   return (
-    <main className="bg-[#ffffff] grid justify-items-center [align-items:start] w-screen">
+    <main className="bg-[#FFFFFF] grid justify-items-center [align-items:start] w-screen">
       <Hero />
-      
       {/* Desktop Content Sections - Hidden on Mobile */}
-      <div className="hidden lg:block bg-[#ffffff] w-[1440px] h-auto min-h-[3200px] relative mx-auto">
-        <section className="inline-flex items-center gap-2.5 px-[54px] py-[54px] absolute top-0 left-[109px] rounded-[32px] overflow-hidden bg-[linear-gradient(46deg,rgba(224,233,251,1)_0%,rgba(252,253,254,1)_100%)]">
+      <div className="hidden lg:block bg-[#FFFFFF] w-[1440px] h-auto min-h-[3400px] relative mx-auto mb-20">
+        <section className="inline-flex items-center gap-2.5 px-[54px] py-[54px] absolute top-0 left-1/2 transform -translate-x-1/2 rounded-[32px] overflow-hidden bg-[linear-gradient(46deg,rgba(224,233,251,1)_0%,rgba(252,253,254,1)_100%)]">
           <div className="flex flex-col w-[1222px] items-start gap-6 relative overflow-hidden">
             {contentSections.map((section, index) => (
               <article
@@ -118,15 +114,13 @@ export default function Page() {
                       src={section.imageSrc}
                     />
                   )}
-
                   {section.hasOverlay && (
                     <div
                       className={`absolute ${section.imageWidth} ${index === 4 ? "h-[443px]" : "h-[442px]"} top-0 ${section.imageLeft} bg-[#00000033]`}
                     />
                   )}
-
                   <Card
-                    className={`absolute ${section.id === 2 || section.id === 4 ? "w-[511px]" : section.id === 6 ? "w-[502px]" : section.id === 3 || section.id === 5 || section.id === 7 ? "w-[501px]" : "w-[494px]"} ${index === 4 ? "h-[443px]" : "h-[442px]"} top-0 ${section.cardPosition === "left" ? "left-0" : section.id === 2 ? "left-[713px]" : "left-[722px]"} bg-[#ffffff] border-0 ${section.cardStyle} shadow-[0px_2px_16px_#10182814]`}
+                    className={`absolute ${section.id === 2 || section.id === 4 ? "w-[511px]" : section.id === 6 ? "w-[502px]" : section.id === 3 || section.id === 5 || section.id === 7 ? "w-[501px]" : "w-[494px]"} ${index === 4 ? "h-[443px]" : "h-[442px]"} top-0 ${section.cardPosition === "left" ? "left-0" : section.id === 2 ? "left-[713px]" : "left-[722px]"} bg-[#FFFFFF] border-0 ${section.cardStyle} shadow-[0px_2px_16px_#10182814]`}
                   >
                     <CardContent
                       className={`absolute flex flex-col items-start gap-6 p-0 ${section.id === 1 ? "w-[364px] top-[95px] left-[54px]" : section.id === 2 ? "w-[379px] top-[95px] left-20" : section.id === 3 ? "w-[329px] top-[83px] left-[86px]" : section.id === 4 ? "w-[379px] top-[79px] left-20" : section.id === 5 ? "w-[364px] top-24 left-[54px]" : section.id === 6 ? "w-[373px] top-[95px] left-[49px]" : "w-[369px] top-[95px] left-16"} ${section.textRotate || ""}`}
@@ -143,7 +137,6 @@ export default function Page() {
                             </React.Fragment>
                           ))}
                         </h2>
-
                         <p className="relative self-stretch [font-family:'Sora',Helvetica] font-normal text-[#000000] text-base tracking-[0] leading-[26px]">
                           {section.description
                             .split("\n")
@@ -165,9 +158,8 @@ export default function Page() {
           </div>
         </section>
       </div>
-
       {/* Mobile Content Sections - Only visible on Mobile/Tablet */}
-      <div className="block lg:hidden w-full px-4 py-8">
+      <div className="block lg:hidden w-full px-4 py-8 mb-16">
         <div className="w-full max-w-md mx-auto space-y-6">
           {contentSections.map((section, index) => (
             <div key={`mobile-${section.id}`} className="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -180,7 +172,6 @@ export default function Page() {
                   />
                 </div>
               )}
-              
               <div className="p-6">
                 <h2 className="text-xl font-semibold text-black mb-4 font-['Sora',_Helvetica] leading-tight">
                   {section.title.split("\n").map((line, lineIndex) => (
@@ -190,7 +181,6 @@ export default function Page() {
                     </React.Fragment>
                   ))}
                 </h2>
-                
                 <p className="text-sm text-gray-700 leading-relaxed font-['Sora',_Helvetica]">
                   {section.description.split("\n").map((line, lineIndex) => (
                     <React.Fragment key={lineIndex}>
