@@ -10,7 +10,7 @@ const CTASection = () => {
   style={{
     backgroundImage: `
       url('/images/img_67c0570ea854203522bca87aherobgpatternavif_414x1224.png'),
-      linear-gradient(to top, #dfe9fb 0%, #ffffff 100%)
+      linear-gradient(to top, #dfe9fb 0%, rgba(255, 255, 255, 1) 100%)
     `,
    
   }}

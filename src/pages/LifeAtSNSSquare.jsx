@@ -100,8 +100,8 @@ export default function Page() {
       <Hero />
       
       {/* Desktop Content Sections - Hidden on Mobile */}
-      <div className="hidden lg:block bg-[#ffffff] w-[1440px] h-auto min-h-[3200px] relative mx-auto">
-        <section className="inline-flex items-center gap-2.5 px-[54px] py-[54px] absolute top-0 left-[109px] rounded-[32px] overflow-hidden bg-[linear-gradient(46deg,rgba(224,233,251,1)_0%,rgba(252,253,254,1)_100%)]">
+      <div className="hidden lg:block bg-[#ffffff] w-[1440px] h-auto min-h-[3400px] relative mx-auto mb-20">
+        <section className="inline-flex items-center gap-2.5 px-[54px] py-[54px] absolute top-0 left-1/2 transform -translate-x-1/2 rounded-[32px] overflow-hidden bg-[linear-gradient(46deg,rgba(224,233,251,1)_0%,rgba(252,253,254,1)_100%)]">
           <div className="flex flex-col w-[1222px] items-start gap-6 relative overflow-hidden">
             {contentSections.map((section, index) => (
               <article
@@ -167,7 +167,7 @@ export default function Page() {
       </div>
 
       {/* Mobile Content Sections - Only visible on Mobile/Tablet */}
-      <div className="block lg:hidden w-full px-4 py-8">
+      <div className="block lg:hidden w-full px-4 py-8 mb-16">
         <div className="w-full max-w-md mx-auto space-y-6">
           {contentSections.map((section, index) => (
             <div key={`mobile-${section.id}`} className="bg-white rounded-2xl shadow-lg overflow-hidden">
