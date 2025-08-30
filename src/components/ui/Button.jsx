@@ -10,7 +10,7 @@ const Button = ({
   type = 'button',
   fullWidth = false,
   className = '',
-  ...props 
+  ...props   
 }) => {
   const baseClasses = 'font-semibold rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
   
