@@ -1,11 +1,13 @@
 import React from 'react';
 import Button from '../../components/ui/Button';
 import Lock from './Lock';
+import { useNavigate as Navigate } from 'react-router-dom';
 const Home = () => {
+  const navigate = Navigate();
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full h-screen min-h-[800px]  overflow-hidden">
+      <div className="relative w-full h-[70%] min-h-[800px]  overflow-hidden">
         {/* Background Pattern */}
         <div 
           className="absolute inset-0 bg-cover  bg-center bg-no-repeat opacity-20"
@@ -27,8 +29,8 @@ const Home = () => {
           <div className="flex flex-col gap-[27px] sm:gap-[40px] md:gap-[54px] justify-start items-center w-full text-center">
             {/* Main Heading */}
             <h1 className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-sora font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full">
-              <span className="text-global-1">We partner with you in your </span>
-              <span className="text-global-5">Agentic Solution</span>
+              <span className="text-global-1">We partner with you in your </span><br/>
+              <span className="text-global-5 text-[#1E63FF]">Agentic Solution</span>
               <span className="text-global-1"> Journey.</span>
             </h1>
 
@@ -235,7 +237,7 @@ const Home = () => {
                     variant="primary"
                     size="medium"
                     className="rounded-full px-6 py-3 text-base font-inter font-semibold text-white"
-                    onClick={() => {}}
+                    onClick={() => {navigate("/usecase")}}
                   >
                     Explore Agentic Use Case
                   </Button>

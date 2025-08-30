@@ -25,7 +25,7 @@ const StickyScrollSection = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex w-full min-h-[120vh] px-6 lg:px-[400px]"
+      className="relative sm:flex w-full sm:min-h-[120vh] px-6 xl:px-[100px] 2xl:px-[400px]"
     >
       {/* Left content */}
       <div className="flex-1 flex mx-auto flex-col justify-center ">
@@ -49,7 +49,7 @@ const StickyScrollSection = () => {
         {/* Second container */}
         <motion.div style={{ opacity: secondOpacity }}>
             
-        <div className="max-w-full ">
+        <div className="max-w-full">
           <div className="grid grid-cols-1  gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-black leading-tight">
@@ -65,14 +65,14 @@ const StickyScrollSection = () => {
         </motion.div>
       </div>
       {/* Right sticky image */}
-      <div className="w-1/2 flex justify-center items-center sticky top-20 h-screen">
+      <div className="w-1/2 flex justify-center items-center sticky  sm:top-20 sm:h-screen">
         <AnimatePresence mode="wait">
           <motion.img
             key={showSecondImage ? "second" : "first"}
             src={showSecondImage ? "/images/puzzle_2.png" : "/images/puzzle.png"}
             alt="Sticky Visual"
            className={`w-[400px] h-auto rounded-2xl shadow-lg ${
-        !showSecondImage ? "mt-[-40px]" : "mt-20"
+        !showSecondImage ? "mt-[-40px] max-sm:mt-[-200px]" : "mt-20"
       }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

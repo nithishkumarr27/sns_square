@@ -499,5 +499,200 @@
       }
     ],
     "relatedUseCases": ["automated-testing", "agile-development", "data-preparation"]
+  },
+  "salesforce-ai-agents": {
+    "id": "salesforce-ai-agents",
+    "title": "AI-Powered Victory: Supercharge Your Business with Salesforce AI Agents!",
+    "category": "Technology",
+    "summary": "Accelerate Revenue. Strengthen Customer Relationships. Scale Without Limits.",
+    "heroTitle": "AI Agents at the Core of Business Transformation",
+    "description": "AI Agents are redefining how Salesforce operates—not as passive tools, but as active digital co-pilots that drive execution, intelligence, and growth. These agents automate repetitive tasks, orchestrate workflows across systems, and surface real-time insights, enabling businesses to move faster, smarter, and at scale.",
+    "image": "/images/img_image_12.png",
+    "tagline": "Accelerate Revenue. Strengthen Customer Relationships. Scale Without Limits.",
+    "sections": [
+      {
+        "id": "business-challenges",
+        "title": "The Business Challenges AI Agents Eliminate",
+        "content": "Traditional Salesforce processes, even in powerful organizations, face systemic obstacles:",
+        "challenges": [
+          "Repetitive Manual Processes slowing sales velocity with data entry, routing, and approvals.",
+          "Disconnected Systems that fragment data across CRM, ERP, and customer platforms.",
+          "Lagging Responses that frustrate prospects and reduce conversion potential.",
+          "Uncaptured Revenue from missed upsell and cross-sell opportunities.",
+          "Scaling Limitations as growing volumes overwhelm human bandwidth."
+        ]
+      },
+      {
+        "id": "agentic-automation",
+        "title": "Agentic Automation and Intelligence",
+        "content": "AI Agents embedded in Salesforce transform execution from reactive to proactive:",
+        "features": [
+          "Workflow Automation – Agents execute repetitive tasks instantly, from lead assignments to account updates.",
+          "Orchestration Across Systems – They synchronize Salesforce with ERP, CRM, and support platforms for seamless operations.",
+          "Real-Time Decisioning – Agents analyze data streams to prioritize leads, accounts, and cases for maximum impact.",
+          "Customer Engagement Intelligence – They personalize interactions, delivering faster and more relevant responses.",
+          "Scalable Execution – Agents adapt to growing volumes without adding overhead, ensuring resilience and continuity."
+        ]
+      },
+      {
+        "id": "business-outcomes",
+        "title": "Business Outcomes at Enterprise Scale",
+        "content": "Faster Delivery Cycles – Agents shorten sales and service timelines through instant automation.",
+        "benefits": [
+          "Revenue Acceleration – Intelligent prioritization and personalization maximize conversions and deal size.",
+          "Efficiency Gains – Automating up to 70% of repetitive tasks reduces costs and frees human talent for strategy.",
+          "Customer Loyalty – Personalized, real-time engagement fosters trust and long-term retention.",
+          "Enterprise Scalability – Agent-driven automation ensures Salesforce scales with business needs without bottlenecks.",
+          "Strategic Advantage – Predictive intelligence equips leaders with foresight for proactive decisions."
+        ]
+      },
+      {
+        "id": "growth-multipliers",
+        "title": "AI Agents as Growth Multipliers",
+        "content": "Salesforce is the foundation—but AI Agents are the force multipliers that elevate it from a CRM into a strategic growth engine. By automating execution, orchestrating systems, and powering intelligent engagement, these agents accelerate delivery, unlock new revenue streams, and ensure organizations operate at enterprise speed and precision. AI Agents are not support tools—they are business accelerators."
+      }
+    ],
+    "relatedUseCases": ["smarter-planning", "data-preparation", "deployment-automation"]
+  },
+  "jira-ai-automation": {
+    "id": "jira-ai-automation",
+    "title": "Automating Jira, Accelerating Product Delivery",
+    "category": "Technology",
+    "summary": "From Backlog to Delivery — Faster, Smarter, Seamless.",
+    "heroTitle": "Jira AI Agents Transform Project Management",
+    "description": "Jira AI Agents transform traditional project management into a high-performance, automated ecosystem. By embedding intelligence into workflows, they streamline execution, eliminate inefficiencies, and empower teams to focus on innovation and business impact.",
+    "image": "/images/img_image_12.png",
+    "tagline": "From Backlog to Delivery — Faster, Smarter, Seamless.",
+    "sections": [
+      {
+        "id": "challenges",
+        "title": "Challenges Slowing Down Delivery",
+        "content": "Project delays are often the result of manual steps, poor prioritization, and disconnected systems.",
+        "challenges": [
+          "Delayed Project Kickoff – Manual issue creation and assignments waste time and slow down project initiation.",
+          "Execution Bottlenecks – Status updates, sub-task creation, and approval routing rely on human effort, creating bottlenecks.",
+          "Fragmented Workflows – Disconnected systems cause misalignment, handoff delays, and rework.",
+          "Poor Task Prioritization – Missed deadlines and delayed delivery of high-value features.",
+          "Slow Reporting Cycles – Manual dashboards and reporting delay insights and decisions.",
+          "Cluttered Boards – Inactive or unresolved issues crowd boards, diverting focus from high-priority work.",
+          "Reactive Collaboration – Missed critical updates and slow resolutions.",
+          "Inefficient Scaling – Manual processes cannot keep pace as projects grow."
+        ]
+      },
+      {
+        "id": "automation-benefits",
+        "title": "Automation That Accelerates Execution",
+        "content": "Jira AI Agents embed automation at each workflow stage and integrate with surrounding tools.",
+        "features": [
+          "Faster Project Kickoff – Automated issue creation and intelligent assignments.",
+          "Streamlined Execution – AI-driven status updates, sub-task generation, and approval workflows.",
+          "Integrated Delivery Pipelines – Orchestration and sync with GitHub, Confluence, CI/CD, CRM, and ERP.",
+          "Smart Prioritization – AI analyzes urgency and dependencies to fast-track critical tasks.",
+          "Proactive Insights – Real-time reporting and dashboards for instant visibility.",
+          "Eliminating Waste – Automated cleanup of stale issues and lifecycle management.",
+          "Always-On Collaboration – Tailored notifications and escalations keep teams aligned."
+        ]
+      },
+      {
+        "id": "business-impact",
+        "title": "Driving Faster Delivery and Business Growth",
+        "content": "Agentic AI accelerates time-to-market, driving cost savings and data-driven decision making.",
+        "benefits": [
+          "Accelerated Time-to-Market – Products and features reach customers faster.",
+          "Operational Efficiency at Scale – Frees teams for strategic priorities.",
+          "Cost Optimization – Lower overhead and fewer errors.",
+          "Data-Driven Decision Making – Real-time insights for rapid business decisions.",
+          "Seamless Team Alignment – Unified workflows and automated communication.",
+          "Improved Quality and Accuracy – Minimizes human error and rework.",
+          "Enterprise-Grade Scalability – Supports large-scale product portfolios.",
+          "Enhanced Customer Value – Faster, higher-quality product delivery."
+        ],
+        "additionalContent": "With Agentic AI at its core, Jira Automation evolves from simple workflows into an intelligent delivery engine."
+      }
+    ],
+    "relatedUseCases": ["agile-development", "automated-testing", "smarter-planning"]
+  },
+  "servicenow-ai-agents": {
+    "id": "servicenow-ai-agents",
+    "title": "Driving Business Value with Intelligent ServiceNow Agents",
+    "category": "Technology",
+    "summary": "Intelligent ServiceNow Agents for Faster, Smarter IT Support",
+    "heroTitle": "ServiceNow AI: ITSM Excellence Unlocked",
+    "description": "Deploying intelligent automation agents within ServiceNow transforms IT support into a proactive, high-speed function, unlocking efficiency, customer satisfaction, and cost savings.",
+    "image": "/images/img_image_12.png",
+    "tagline": "Intelligent ServiceNow Agents for Faster, Smarter IT Support",
+    "sections": [
+      {
+        "id": "business-challenge",
+        "title": "Business Challenge",
+        "content": "Businesses today face rapidly increasing user demands and complexity in IT operations.",
+        "challenges": [
+          "Escalating Volumes: Higher support query volumes overwhelm teams.",
+          "Inconsistency and Delays: Manual processes cause errors and response bottlenecks.",
+          "Resource Constraints: Skilled IT staff are trapped by repetitive triage.",
+          "Visibility and Compliance Gaps: Manual ticketing reduces transparency."
+        ]
+      },
+      {
+        "id": "the-automation-solution",
+        "title": "The Automation Solution",
+        "content": "Intelligent ServiceNow agents automate workflow from intake to resolution.",
+        "features": [
+          "Scheduler & Mail Fetcher Agents: Instantly capture and queue support requests.",
+          "Classifier & Summary Agents: Filter out noise and summarize actionable issues.",
+          "Category Extractor & ServiceNow Agents: Route, prioritize, and format tickets automatically.",
+          "Notification & Tracker Agents: Keep all stakeholders informed and ensure timely resolution."
+        ]
+      },
+      {
+        "id": "benefits-impact",
+        "title": "Business Benefits & Impact",
+        "content": "Automation unlocks operational efficiency, cost savings, and a better experience.",
+        "benefits": [
+          "Operational Excellence & Cost Savings: Up to 70% manual effort reduction and fewer errors.",
+          "Enhanced Customer & Employee Experience: Faster and always-on support, clearer communication.",
+          "Insight and Accountability: Real-time tracking, improved reporting, and data-driven improvements.",
+          "Agility and Innovation: Easily scale, adapt workflows, and redeploy skilled staff to strategic projects."
+        ]
+      },
+      {
+        "id": "implementation-considerations",
+        "title": "Implementation Considerations for Business Leaders",
+        "content": "Success with ServiceNow agents requires clear KPIs, open communication, continuous improvement, and compliance.",
+        "features": [
+          "Align to business KPIs (e.g., ticket resolution time, SLA compliance, satisfaction).",
+          "Provide change management and training to stakeholders.",
+          "Leverage data for ongoing refinement.",
+          "Ensure policies and regulatory standards are met."
+        ]
+      },
+      {
+        "id": "real-world-scenario",
+        "title": "Real-World Scenario",
+        "content": "Global rollout of ServiceNow agents led to:",
+        "benefits": [
+          "50%+ faster average ticket resolution.",
+          "30% more IT staff time on strategic projects.",
+          "25% improvement in user satisfaction from clearer communication."
+        ]
+      },
+      {
+        "id": "agents-overview",
+        "title": "Our Agents",
+        "content": "ServiceNow AI strengthens support with these purpose-built automation agents.",
+        "features": [
+          "Scheduler Agent: Triggers ServiceNow workflows at intervals.",
+          "Mail Fetcher Agent: Retrieves all new support emails.",
+          "Classifier Agent: Distinguishes support requests from noise.",
+          "Summary Agent: Distills incoming messages into actionable ticket summaries.",
+          "Category Extractor Agent: Uses NLP to identify issue category, impacts, and urgency.",
+          "ServiceNow Agent: Creates, updates, and manages ServiceNow incidents.",
+          "Notification Agent: Sends structured updates to end-users.",
+          "Tracker Agent: Tracks ticket status, triggers escalation/closure, and maintains real-time visibility."
+        ],
+        "additionalContent": "These agents deliver operational excellence, resilience, and a data-rich foundation for ongoing service improvement."
+      }
+    ],
+    "relatedUseCases": ["data-preparation", "deployment-automation", "agile-development"]
   }
 }

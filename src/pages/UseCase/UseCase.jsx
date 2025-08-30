@@ -15,45 +15,55 @@ export const UseCase = () => {
   // Dynamic data mapping
   const dataMapping = {
     "supply-chain": {
-      data: Object.values(useCaseData).filter(uc => uc.category === "Supply Chain"),
+      data: Object.values(useCaseData).filter(
+        (uc) => uc.category === "Supply Chain"
+      ),
       categoryInfo: {
         id: "supply-chain",
         label: "Supply Chain",
-        icon: "/icons/supply.svg"
-      }
+        icon: "/icons/supply.svg",
+      },
     },
     "information-technology": {
-      data: Object.values(useCaseData).filter(uc => uc.category === "Technology"),
+      data: Object.values(useCaseData).filter(
+        (uc) => uc.category === "Technology"
+      ),
       categoryInfo: {
         id: "information-technology",
-        label: "Information Technology", 
-        icon: "/icons/it.svg"
-      }
+        label: "Information Technology",
+        icon: "/icons/it.svg",
+      },
     },
-    "healthcare": {
-      data: Object.values(useCaseData).filter(uc => uc.category === "Healthcare"),
+    healthcare: {
+      data: Object.values(useCaseData).filter(
+        (uc) => uc.category === "Healthcare"
+      ),
       categoryInfo: {
         id: "healthcare",
         label: "Healthcare",
-        icon: "/icons/healthcare.svg"
-      }
+        icon: "/icons/healthcare.svg",
+      },
     },
     "human-resource": {
-      data: Object.values(useCaseData).filter(uc => uc.category === "Human Resource"),
+      data: Object.values(useCaseData).filter(
+        (uc) => uc.category === "Human Resource"
+      ),
       categoryInfo: {
         id: "human-resource",
         label: "Human Resource",
-        icon: "/icons/humanresource.svg"
-      }
+        icon: "/icons/humanresource.svg",
+      },
     },
-    "insurance": {
-      data: Object.values(useCaseData).filter(uc => uc.category === "Insurance"),
+    insurance: {
+      data: Object.values(useCaseData).filter(
+        (uc) => uc.category === "Insurance"
+      ),
       categoryInfo: {
         id: "insurance",
         label: "Insurance",
-        icon: "/icons/humanresource.svg"
-      }
-    }
+        icon: "/icons/humanresource.svg",
+      },
+    },
   };
 
   // Extract category filters dynamically from the data mapping
@@ -74,7 +84,7 @@ export const UseCase = () => {
       title: useCase.title,
       description: useCase.summary || useCase.description,
       category: activeCategory,
-      image: useCase.image
+      image: useCase.image,
     }));
   };
 
@@ -98,8 +108,8 @@ export const UseCase = () => {
 
   // Get the use cases to display (first 4 by default, all if showAllUseCases is true)
   const currentUseCases = getCurrentUseCases();
-  const useCasesToDisplay = showAllUseCases 
-    ? currentUseCases 
+  const useCasesToDisplay = showAllUseCases
+    ? currentUseCases
     : currentUseCases.slice(0, 4);
 
   const categoryFilters = getCategoryFilters();
@@ -110,18 +120,30 @@ export const UseCase = () => {
         {/* Background blur effect */}
         <div className="absolute w-[300px] h-[300px] md:w-[470px] md:h-[470px] top-0 left-1/2 transform -translate-x-1/2 md:left-[485px] md:transform-none bg-[#1357e591] rounded-full blur-[400px]" />
 
-        <div className="flex flex-col items-center gap-10 md:gap-20  lg:px-0">
+        <div className="flex flex-col items-center gap-10 md:gap-20 px-4 md:px-8 lg:px-16">
           {/* Hero Section */}
-          <div className="relative w-full h-[300px] md:h-[440px] bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url(/images/UsecaseBackground.svg)"}}>
+          <div
+            className="relative w-full h-[300px] md:h-[440px] bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage:
+                "url(/images/img_67c0570ea854203522bca87aherobgpatternavif.png)",
+            }}
+          >
             {/* Decorative border element */}
-            <div className="absolute w-[60px] h-[60px] md:w-[88px] md:h-[83px] top-[40px] left-[20px] md:top-[84px] md:left-[39px] border-2 border-solid border-transparent shadow-[inset_-5px_-5px_250px_#ffffff05] backdrop-blur-[21px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(21px)_brightness(100%)] [border-image:linear-gradient(169deg,rgba(255,255,255,0.4)_0%,rgba(238,237,237,0.2)_100%)_1] [background:radial-gradient(50%_50%_at_0%_0%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]" />
+            <div className="absolute w-[60px]  h-[60px] md:w-[88px] md:h-[83px] top-[40px] left-[20px] md:top-[84px] md:left-[39px] border-2 border-solid border-transparent shadow-[inset_-5px_-5px_250px_#ffffff05] backdrop-blur-[21px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(21px)_brightness(100%)] [border-image:linear-gradient(169deg,rgba(255,255,255,0.4)_0%,rgba(238,237,237,0.2)_100%)_1] [background:radial-gradient(50%_50%_at_0%_0%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]" />
 
-            <div className="flex flex-col items-center justify-center gap-6 md:gap-[55px] absolute inset-0 px-4 md:px-8">
-              <div className="text-center max-w-4xl">
-                <h1 className="font-sora font-semibold text-black text-5xl md:text-6xl lg:text-[54px] tracking-tight md:tracking-[-0.69px] leading-tight md:leading-[54px]">
-                  Partnered Progress:{" "}
-                  <span className="text-[#064EE3]">Agentic AI</span>{" "}
-                  Solutions for Every Sector
+            <div className="flex flex-col items-center mt-36 justify-center gap-6 md:gap-[55px] absolute inset-0 px-4 md:px-8">
+              <div className="text-center max-w-6xl">
+                <h1 className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-Manrope font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full">
+                  <span className="text-global-1">Partnered Progress</span>
+                  <span className="text-global-1 lg:text-[50px]"> : </span>
+                  <span className="text-global-5 text-[#064EE3]">
+                    Agentic AI
+                  </span>
+                  <br />
+                  <span className="text-global-1">
+                    Solution for Every Sector
+                  </span>
                 </h1>
               </div>
             </div>
@@ -130,7 +152,7 @@ export const UseCase = () => {
           {/* Main Content */}
           <div className="flex flex-col lg:flex-row w-full max-w-7xl items-start gap-6 lg:gap-6">
             {/* Category Filters */}
-            <div className="flex flex-col w-full lg:w-72 items-start gap-4">
+            <div className="flex flex-col w-full lg:w-72 items-start gap-4 mb-10 ">
               {categoryFilters.map((filter) => (
                 <Button
                   key={filter.id}
@@ -144,9 +166,17 @@ export const UseCase = () => {
                     className="w-6 h-6 md:w-8 md:h-8"
                     alt="Category icon"
                     src={filter.icon}
-                    style={filter.isActive ? 
-                      { filter: 'brightness(0) saturate(100%) invert(25%) sepia(89%) saturate(3028%) hue-rotate(212deg) brightness(94%) contrast(90%)' } : 
-                      { filter: 'brightness(0) saturate(100%) invert(15%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(95%)', opacity: 0.41 }
+                    style={
+                      filter.isActive
+                        ? {
+                            filter:
+                              "brightness(0) saturate(100%) invert(25%) sepia(89%) saturate(3028%) hue-rotate(212deg) brightness(94%) contrast(90%)",
+                          }
+                        : {
+                            filter:
+                              "brightness(0) saturate(100%) invert(15%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(95%)",
+                            opacity: 0.41,
+                          }
                     }
                   />
 
@@ -163,36 +193,68 @@ export const UseCase = () => {
 
             {/* Use Cases Grid */}
             <div className="flex flex-col w-full lg:w-[1000px] items-center justify-center gap-8 md:gap-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
-                {useCasesToDisplay.map((useCase) => (
-                  <UseCaseCard
-                    key={useCase.id}
-                    useCase={useCase}
-                    onLearnMore={handleLearnMoreClick}
-                  />
-                ))}
-              </div>
-
-              {!showAllUseCases && currentUseCases.length > 4 && (
-                <Button 
-                  onClick={handleViewAllClick}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[80px] bg-[linear-gradient(90deg,rgba(6,78,227,1)_0%,rgba(61,118,236,1)_100%)] h-auto"
-                >
-                  <div className="font-inter font-semibold text-white text-sm md:text-base text-center tracking-0 leading-6 whitespace-nowrap">
-                    View All Use Cases
+              {currentUseCases.length === 0 ? (
+                // No Data State
+                <div className="flex flex-col items-center justify-center min-h-[400px] w-full text-center">
+                  <div className="w-24 h-24 mb-6 rounded-full bg-gray-100 flex items-center justify-center">
+                    <svg
+                      className="w-12 h-12 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
                   </div>
-                </Button>
-              )}
-
-              {showAllUseCases && currentUseCases.length > 4 && (
-                <Button 
-                  onClick={handleShowLessClick}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[80px] bg-[linear-gradient(90deg,rgba(6,78,227,1)_0%,rgba(61,118,236,1)_100%)] h-auto"
-                >
-                  <div className="font-inter font-semibold text-white text-sm md:text-base text-center tracking-0 leading-6 whitespace-nowrap">
-                    Show Less
+                  <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-2">
+                    No Use Cases Available
+                  </h3>
+                  <p className="text-gray-500 max-w-md">
+                    There are currently no use cases available for the selected
+                    category. Please check back later or select a different
+                    category.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
+                    {useCasesToDisplay.map((useCase) => (
+                      <UseCaseCard
+                        key={useCase.id}
+                        useCase={useCase}
+                        onLearnMore={handleLearnMoreClick}
+                      />
+                    ))}
                   </div>
-                </Button>
+
+                  {!showAllUseCases && currentUseCases.length > 4 && (
+                    <Button
+                      onClick={handleViewAllClick}
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[80px] bg-[linear-gradient(90deg,rgba(6,78,227,1)_0%,rgba(61,118,236,1)_100%)] h-auto"
+                    >
+                      <div className="font-inter font-semibold text-white text-sm md:text-base text-center tracking-0 leading-6 whitespace-nowrap">
+                        View All Use Cases
+                      </div>
+                    </Button>
+                  )}
+
+                  {showAllUseCases && currentUseCases.length > 4 && (
+                    <Button
+                      onClick={handleShowLessClick}
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[80px] bg-[linear-gradient(90deg,rgba(6,78,227,1)_0%,rgba(61,118,236,1)_100%)] h-auto"
+                    >
+                      <div className="font-inter font-semibold text-white text-sm md:text-base text-center tracking-0 leading-6 whitespace-nowrap">
+                        Show Less
+                      </div>
+                    </Button>
+                  )}
+                </>
               )}
             </div>
           </div>
@@ -203,6 +265,6 @@ export const UseCase = () => {
       </div>
     </div>
   );
-}
+};
 
 export default UseCase;

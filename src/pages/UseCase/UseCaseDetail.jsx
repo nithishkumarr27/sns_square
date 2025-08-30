@@ -245,15 +245,15 @@ export default function UseCaseDetail() {
 
     return (
         <div 
-            className="min-h-screen font-sans text-gray-800"
+            className="min-h-screen mt-20  font-sans text-gray-800"
             style={{
-                background: 'linear-gradient(180deg, #aab6e2bd 0px, #c2cce79f 100px, #e9e9e9d3 200px)'
+                 background: 'linear-gradient(180deg, #aab6e2bd 0px, #c2cce79f 100px, #ffffffff 200px)'
             }}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
                 
 
-                <div className="flex flex-col mt-20 lg:flex-row lg:space-x-8 xl:space-x-12">
+                <div className="flex flex-col lg:flex-row lg:space-x-8 xl:space-x-12">
                     {/* Left Sidebar Navigation */}
                     <aside className="w-full lg:w-2/7 mb-8 lg:mb-0">
                         <div className="sticky top-4 lg:top-12">
@@ -383,7 +383,7 @@ export default function UseCaseDetail() {
                                         }`}
                                         style={{ transitionDelay: `${(index + 1) * 200}ms` }}
                                     >
-                                        <h2 className="text-lg sm:text-xl font-semibold">{section.title}</h2>
+                                        <h2 className="text-lg mb-3 sm:text-xl font-semibold">{section.title}</h2>
                                         <p className="text-sm sm:text-base">{section.content}</p>
                                         
                                         {section.challenges && (
@@ -430,33 +430,43 @@ export default function UseCaseDetail() {
                 </div>
 
                 {/* Related Use Cases Section */}
-                {relatedUseCases.length > 0 && (
-                    <section id="related-section" className={`fade-in-element mt-12 sm:mt-16 lg:mt-20 transition-all duration-1000 ease-out delay-500 ${
-                        visibleElements.has('related-section') 
-                            ? 'opacity-100 translate-y-0' 
-                            : 'opacity-0 translate-y-8'
-                    }`}>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Other Use Cases</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 justify-items-start">
-                            {relatedUseCases.map((relatedCase, index) => (
-                                <div
-                                    key={relatedCase.id}
-                                    className={`transition-all duration-800 ease-out ${
-                                        visibleElements.has('related-section') 
-                                            ? 'opacity-100 translate-y-0' 
-                                            : 'opacity-0 translate-y-8'
-                                    }`}
-                                    style={{ transitionDelay: `${600 + (index * 150)}ms` }}
-                                >
-                                    <UseCaseCard
-                                        useCase={relatedCase}
-                                        onLearnMore={handleLearnMore}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                )}
+{relatedUseCases.length > 0 && (
+  <section
+    id="related-section"
+    className={`fade-in-element mt-12 sm:mt-16 lg:mt-20 transition-all duration-1000 ease-out delay-500 ${
+      visibleElements.has('related-section')
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-8'
+    }`}
+  >
+    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+      Other Use Cases
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+      {relatedUseCases.map((relatedCase, index) => (
+        <div
+          key={relatedCase.id}
+          className={`transition-all duration-700 ease-out ${
+            visibleElements.has('related-section')
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
+          }`}
+          style={{ transitionDelay: `${600 + index * 150}ms` }}
+        >
+          <div className="h-full w-full bg-white rounded-2xl p-6 flex flex-col justify-between transition-transform transform duration-300 hover:scale-105 ">
+            <UseCaseCard
+              useCase={relatedCase}
+              onLearnMore={handleLearnMore}
+              className="h-full w-full"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+
             </div>
         </div>
     );
